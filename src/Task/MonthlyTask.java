@@ -2,9 +2,10 @@ package Task;
 import java.time.*;
 
 public class MonthlyTask extends Task {
-    public MonthlyTask(){
-        super();
+    public MonthlyTask(int type, String title, String description) {
+        super(type, title, description);
     }
+
 
     @Override
     public boolean appearsIn(LocalDateTime time) {

@@ -25,13 +25,4 @@ public class TaskService {
             throw new TaskNotFoundException("Задачи на эту дату отсутствуют");
         return tasks;
     }
-
-    public class TaskNotFoundException extends RuntimeException{
-        public TaskNotFoundException() {
-            super();
-        }
-        public TaskNotFoundException(String message) {
-            super(message);
-        }
-    }
 }

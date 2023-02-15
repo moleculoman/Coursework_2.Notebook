@@ -2,15 +2,13 @@ package Task;
 import java.time.*;
 
 public class YearlyTask extends Task {
-    public YearlyTask() {
-        super();
+    public YearlyTask(int type, String title, String description) {
+        super(type, title, description);
     }
 
     @Override
     public boolean appearsIn(LocalDateTime time) {
-        if (time.toLocalDate().getDayOfYear() == getDateTime().toLocalDate().getDayOfYear()) {
-            time.isBefore(getDateTime());
-        }
-        return false;
+        return time.toLocalDate().getDayOfYear() == getDateTime().toLocalDate().getDayOfYear()
+                && !time.isBefore(getDateTime());
     }
 }

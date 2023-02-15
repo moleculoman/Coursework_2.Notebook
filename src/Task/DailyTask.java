@@ -2,8 +2,8 @@ package Task;
 import java.time.*;
 
 public class DailyTask extends Task {
-    public DailyTask(){
-        super();
+    public DailyTask(int type, String title, String description) {
+        super(type, title, description);
     }
 
     @Override
